@@ -1,0 +1,49 @@
+ideas = {
+	country = {
+
+         quebecois_influence = {
+			
+			allowed = {
+				always = no
+				original_tag = ONT
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				communism_acceptance = 85
+			}
+		}
+	}
+	country = {
+
+         victory_at_all_costs = {
+			
+			allowed = {
+				always = no
+				original_tag = ONT
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				conscription_factor = 0.25
+				production_speed_buildings_factor = 0.15
+				
+			}
+		}
+	}
+}

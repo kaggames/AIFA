@@ -1,0 +1,35 @@
+add_namespace = ontario
+
+country_event = {
+	id = ontario.0
+	title = ontario.0.t
+	desc = ontario.0.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = of_course.3.a
+		ai_chance = {factor = 75}
+		GQU = {
+			country_event = {id = quebec.2}
+
+		
+		}
+	
+	
+}
+	option = {
+		name = no_way.3.b
+		ai_chance = {factor = 25}
+		GQU = {
+			country_event = {id = quebec.1}
+
+		
+		}
+	
+	
+    }
+}

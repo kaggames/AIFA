@@ -1,0 +1,26 @@
+add_namespace = phil
+
+country_event = {
+	id = phil.0
+	title = phil.0.t
+	desc = phil.0.d
+	picture = GFX_report_event_german_speech
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = phil.0.a
+		ai_chance = {factor = 100}
+		start_civil_war = {
+		ruling_party = fascism
+		ideology = democratic
+		size = 0.8
+		only_own_territory = no
+		capital = 261
+		states = { 
+        261
+			}
+		}
+	}
+}

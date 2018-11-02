@@ -1,0 +1,264 @@
+ideas = {
+
+     country = {
+
+         fascist_propaganda = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+		
+		worker_strikes = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+		
+		a_new_destiny = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_democratic_south_america
+			
+			modifier = {
+				democratic_drift = 0.1
+				fascism_drift = -0.1
+			}
+		}
+		english_sepratists = {
+			
+			allowed = {
+				original_tag = GQU
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = -0.5
+				stability_factor= -0.25
+				democratic_drift = 0.05
+				
+			}
+		}
+		  anti_america = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+			
+				conscription = 0.015
+				stability_factor= -0.10
+				war_support_factor= 0.25
+			}
+		}
+		  purge_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+			stability_factor = 0.15
+			drift_defence_factor = 0.20
+			}
+		}
+		  milyouth = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.10
+				conscription = 0.015
+				
+			}
+		}
+		  canada_men = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+				
+			}
+		}
+		  united = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				conscription_factor = 0.10
+				
+			}
+		}
+		american_men = {
+			
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+					has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+				
+			modifier = {
+			GQU = BOS attack_bonus_against = 0.2
+			GQU = BOS defense_bonus_against = 0.1
+				
+			}
+		}
+		trade_b = {
+			
+		allowed = {
+		always = no
+			}
+
+		allowed_civil_war = {
+					has_government = democratic
+			}
+
+		removal_cost = -1
+
+		picture = generic_fascism_drift_bonus
+				
+		modifier = {
+			production_speed_buildings_factor = 0.20
+		}
+	}
+		high_class = {
+			
+		allowed = {
+		always = no
+			}
+
+		allowed_civil_war = {
+					has_government = democratic
+			}
+
+		removal_cost = -1
+
+		picture = generic_fascism_drift_bonus
+				
+		modifier = {
+			production_speed_buildings_factor = 0.15
+			political_power_gain = 0.25
+		}
+	}
+		oh_canada = {
+			
+		allowed = {
+		always = no
+			}
+
+		allowed_civil_war = {
+					has_government = democratic
+			}
+
+		removal_cost = -1
+
+		picture = generic_fascism_drift_bonus
+				
+		modifier = {
+			conscription_factor = 0.15
+			army_core_attack_factor = 0.20
+			army_core_defence_factor = 0.15
+			production_factory_max_efficiency_factor = 0.15
+		}
+	}
+}
+	

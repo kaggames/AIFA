@@ -1,0 +1,13 @@
+﻿l_english:
+ GQU_fascism:0 "Greater Quebecois Empire"
+ GQU_fascism_DEF:0 "the Greater Quebecois Empire"
+ GQU_democratic:0 "New French Republic"
+ GQU_democratic_DEF:0 "the New French Republic"
+ GQU_neutrality:1 "Quebec"
+ GQU_neutrality_DEF:1 "Quebec"
+ GQU_communism:0 "Socialist Republic of Quebec"
+ GQU_communism_DEF:0 "the Socialist Republic of Quebec"
+ GQU_fascism_ADJ:0 "Quebecois"
+ GQU_democratic_ADJ:0 "New French"
+ GQU_neutrality_ADJ:0 "Quebecois"
+ GQU_communism_ADJ:0 "Quebecois"

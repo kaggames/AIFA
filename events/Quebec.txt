@@ -1,0 +1,192 @@
+add_namespace = quebec
+
+country_event = {
+	id = quebec.1
+	title = quebec.1.t
+	desc = quebec.1.d
+	picture = GFX_report_event_german_speech
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = what.1.a
+		ai_chance = {factor = 100}
+			create_wargoal = {
+			type = annex_everything
+			target = ONT
+
+		
+
+		}
+
+		
+	}
+}
+country_event = {
+	id = quebec.2
+	title = quebec.2.t
+	desc = quebec.2.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = great.2.a
+		ai_chance = {factor = 100}
+		annex_country = {target = ONT transfer_troops = yes}
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+	
+	}
+
+}
+country_event = {
+	id = quebec.3
+	title = quebec.3.t
+	desc = quebec.3.d
+	picture = GFX_report_event_bunker_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = quebec.3.a
+		468 = {
+			add_building_construction = {
+				type = bunker
+				province = 7345
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 4345
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9472
+				level = 2
+				instant_build = yes
+			}
+		}
+		466 = {
+					add_building_construction = {
+				type = bunker
+				province = 1341
+				level = 2
+				instant_build = yes
+		    }
+					add_building_construction = {
+				type = bunker
+				province = 12276
+				level = 2
+				instant_build = yes
+			}
+					add_building_construction = {
+				type = bunker
+				province = 12205
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+	country_event = {
+	id = quebec.4
+	title = quebec.4.t
+	desc = quebec.4.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	 name = quebec.4.a
+	}
+}
+	country_event = {
+	id = quebec.5
+	title = quebec.5.t
+	desc = quebec.5.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = quebec.5.a
+		468 = {
+			add_building_construction = {
+				type = bunker
+				province = 7289
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 10230
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 10174
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 1284
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = quebec.6
+	title = quebec.6.t
+	desc = quebec.6.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = quebec.6.a
+		ai_chance = {factor = 100}
+		GQU = {
+			transfer_state = 465
+			add_state_core = 465
+			transfer_state = 464
+			add_state_core = 464			
+			}
+		give_guarantee = BOS
+		}
+	}
+country_event = {
+	id = quebec.7
+	title = quebec.7.t
+	desc = quebec.7.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = quebec.7.a
+		ai_chance = {factor = 100}
+		create_wargoal = {
+		type = annex_everything
+		target = BOS
+			}
+		}
+	}

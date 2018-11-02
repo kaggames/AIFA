@@ -1,0 +1,35 @@
+add_namespace = boston
+
+country_event = {
+	id = boston.0
+	title = boston.0.t
+	desc = boston.0.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = boston.0.a
+		ai_chance = {factor = 50}
+		GQU = {
+			country_event = {id = quebec.6}
+
+		
+		}
+	
+	
+}
+	option = {
+		name = boston.0.b
+		ai_chance = {factor = 50}
+		GQU = {
+			country_event = {id = quebec.7}
+
+		
+		}
+	
+	
+    }
+}

@@ -1,0 +1,387 @@
+focus_tree = {
+id = ONT
+country = {
+factor= 0
+modifier = {
+add = 10
+tag = ONT
+}
+}
+default = no
+#Custom focuses start here
+#Focus for prepare for canadas last stand 
+		focus = { 
+		id = prepareforcanadaslaststand 
+		icon = GFX_focus_generic_the_giant_wakes 
+		ai_will_do = { factor = 0 } 
+ x =1 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for mordernize army 
+		focus = { 
+		id = mordernizearmy 
+		icon = GFX_goal_rhineland 
+		ai_will_do = { factor = 0 } 
+ x = 5
+ y = 0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for guess it wasnt our last defence 
+		focus = { 
+		id = guessitwasntourlastdefence 
+		icon = GFX_goal_generic_support_democracy 
+		ai_will_do = { factor = 0 } 
+ x =8 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for repair the railway 
+		focus = { 
+		id = repairtherailway 
+		icon = GFX_goal_generic_construct_infrastructure 
+		ai_will_do = { factor = 0 } 
+ x =0 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = prepareforcanadaslaststand} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for strong defense 
+		focus = { 
+		id = strongdefense 
+		icon = GFX_goal_generic_defence 
+		ai_will_do = { factor = 0 } 
+ x =2 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = prepareforcanadaslaststand} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for equipment focus 
+		focus = { 
+		id = equipmentfocus 
+		icon = GFX_goal_generic_small_arms 
+		ai_will_do = { factor = 0 } 
+ x = 4 
+ y = 1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = mordernizearmy} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for mechenized focus 
+		focus = { 
+		id = mechenizedfocus 
+		icon = GFX_goal_generic_production2 
+		ai_will_do = { factor = 0 } 
+ x = 6
+ y = 1
+ mutually_exclusive = { } 
+ prerequisite = { focus = mordernizearmy} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for we must go a new route 
+		focus = { 
+		id = wemustgoanewroute 
+		icon = GFX_focus_rom_royal_dictatorship 
+		ai_will_do = { factor = 0 } 
+ x = 8 
+ y =1 
+ mutually_exclusive = { focus = northamericansuperpower} 
+ prerequisite = { focus = guessitwasntourlastdefence} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for north american super power 
+		focus = { 
+		id = northamericansuperpower 
+		icon = GFX_focus_generic_the_giant_wakes 
+		ai_will_do = { factor = 0 } 
+ x = 13
+ y =1 
+ mutually_exclusive = { focus = wemustgoanewroute} 
+ prerequisite = { focus = guessitwasntourlastdefence} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for our industrial might 
+		focus = { 
+		id = ourindustrialmight 
+		icon = GFX_goal_generic_construct_civ_factory 
+		ai_will_do = { factor = 0 } 
+ x =0 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = repairtherailway} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for hold the line 
+		focus = { 
+		id = holdtheline 
+		icon = GFX_focus_generic_support_the_left_right 
+		ai_will_do = { factor = 0 } 
+ x =2 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = strongdefense} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for equipment focus 2 
+		focus = { 
+		id = equipmentfocus2 
+		icon = GFX_goal_generic_military_sphere 
+		ai_will_do = { factor = 0 } 
+ x = 4
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = equipmentfocus} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for armor focus 
+		focus = { 
+		id = armorfocus 
+		icon = GFX_goal_generic_army_tanks 
+		ai_will_do = { factor = 0 } 
+ x = 6
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = mechenizedfocus} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for invite king george 
+		focus = { 
+		id = invitekinggeorge 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties 
+		ai_will_do = { factor = 0 } 
+ x = 8
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = wemustgoanewroute} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for accept american refuges 
+		focus = { 
+		id = acceptamericanrefuges 
+		icon = GFX_goal_generic_forceful_treaty 
+		ai_will_do = { factor = 0 } 
+ x = 13
+ y =2 
+ mutually_exclusive = {} 
+ prerequisite = { focus = northamericansuperpower } 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for our workers might 
+		focus = { 
+		id = ourworkersmight 
+		icon = GFX_goal_generic_construct_mil_factory 
+		ai_will_do = { factor = 0 } 
+ x =0 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ourindustrialmight} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for a working maginot 
+		focus = { 
+		id = aworkingmaginot 
+		icon = GFX_goal_generic_fortify_city 
+		ai_will_do = { factor = 0 } 
+ x =2 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = holdtheline} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for small but strong 
+		focus = { 
+		id = smallbutstrong 
+		icon = GFX_goal_generic_allies_build_infantry 
+		ai_will_do = { factor = 0 } 
+ x = 4
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = equipmentfocus2 focus = armorfocus} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for the royal guard 
+		focus = { 
+		id = theroyalguard 
+		icon = GFX_goal_generic_political_pressure 
+		ai_will_do = { factor = 0 } 
+ x = 6
+ y = 4
+ mutually_exclusive = { } 
+ prerequisite = { focus = invitekinggeorge} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for the commonwealth 
+		focus = { 
+		id = thecommonwealth 
+		icon = GFX_focus_generic_coastal_fort 
+		ai_will_do = { factor = 0 } 
+ x = 10
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = invitekinggeorge} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for rally the people  
+		focus = { 
+		id = rallythepeople 
+		icon = GFX_focus_generic_military_academy 
+		ai_will_do = { factor = 0 } 
+ x = 13
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = acceptamericanrefuges} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for crusade against  communism 
+		focus = { 
+		id = crusadeagainstcommunism 
+		icon = GFX_goal_anti_comintern_pact 
+		ai_will_do = { factor = 0 } 
+ x = 15
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = acceptamericanrefuges} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for crush the fascists 
+		focus = { 
+		id = crushthefascists 
+		icon = GFX_goal_generic_support_fascism 
+		ai_will_do = { factor = 0 } 
+ x = 17
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = acceptamericanrefuges} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for ottowa shall not fall 
+		focus = { 
+		id = ottowashallnotfall 
+		icon = GFX_goal_generic_fortify_city 
+		ai_will_do = { factor = 0 } 
+ x =1 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = ourworkersmight focus = aworkingmaginot} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for the royal navy 
+		focus = { 
+		id = theroyalnavy 
+		icon = GFX_goal_generic_amphibious_assault 
+		ai_will_do = { factor = 0 } 
+ x =6 
+ y = 5
+ mutually_exclusive = { } 
+ prerequisite = { focus = theroyalguard} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for oceania 
+		focus = { 
+		id = oceania 
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers 
+		ai_will_do = { factor = 0 } 
+ x =8 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thecommonwealth} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for africa 
+		focus = { 
+		id = africa 
+		icon = GFX_focus_SAF_secure_africa 
+		ai_will_do = { factor = 0 } 
+ x = 10
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thecommonwealth} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for india 
+		focus = { 
+		id = india 
+		icon = GFX_focus_RAJ_all_india_forward_bloc 
+		ai_will_do = { factor = 0 } 
+ x = 12
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thecommonwealth} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for enprison the communists 
+		focus = { 
+		id = enprisonthecommunists 
+		icon = GFX_focus_yug_pan_slavic_congress 
+		ai_will_do = { factor = 0 } 
+ x = 15 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = crusadeagainstcommunism} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for support the boston rebels 
+		focus = { 
+		id = supportthebostonrebels 
+		icon = GFX_goal_continuous_def_against_influence 
+		ai_will_do = { factor = 0 } 
+ x = 17
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = crushthefascists} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for royal airforce 
+		focus = { 
+		id = royalairforce 
+		icon = GFX_goal_generic_air_fighter 
+		ai_will_do = { factor = 0 } 
+ x =6 
+ y = 6
+ mutually_exclusive = { } 
+ prerequisite = { focus = theroyalnavy} 
+ cost = null  
+  available_if_capitulated = yes  
+ }#Focus for the uk 
+		focus = { 
+		id = theuk 
+		icon = GFX_focus_AST_never_gallipoli 
+		ai_will_do = { factor = 0 } 
+ x = 10
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = africa} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for take down the socialists 
+		focus = { 
+		id = takedownthesocialists 
+		icon = GFX_goal_generic_major_war 
+		ai_will_do = { factor = 0 } 
+ x =15
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = enprisonthecommunists} 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#Focus for time to act 
+		focus = { 
+		id = timetoact 
+		icon = GFX_goal_generic_more_territorial_claims 
+		ai_will_do = { factor = 0 } 
+ x = 17
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = supportthebostonrebels } 
+ cost = 10  
+  available_if_capitulated = yes  
+ }#End of focuses 
+}

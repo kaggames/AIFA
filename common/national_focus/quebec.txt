@@ -1,0 +1,880 @@
+focus_tree = {
+	id = Quebec
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GQU
+		}
+	}
+	focus = {
+		id = Discard_the_Treaty_Of_1934
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		mutually_exclusive = {
+			focus = Respect_The_Treaty_Of_1934
+		}
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = Deal_With_the_Rebles
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		x = 16
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 20
+				}
+
+	}
+	focus = {
+		id = Respect_The_Treaty_Of_1934
+		icon = GFX_goal_anschluss
+		cost = 10
+		mutually_exclusive = {
+			focus = Discard_the_Treaty_Of_1934
+		}
+		x = 13
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+			}
+
+	}
+	focus = {
+		id = Industry_Focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = 20
+		y = 0
+
+	}
+	focus = {
+		id = Worker_Strikes
+		icon = GFX_goal_support_communism
+		cost = 10
+		prerequisite = {
+			focus = Discard_the_Treaty_Of_1934
+		}
+		mutually_exclusive = {
+			focus = Strenthen_The_gouvernement
+		}
+		x = 1
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = -20
+					add_ideas = worker_strikes
+				}
+
+	}
+	focus = {
+		id = Rally_The_People
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10
+		prerequisite = {
+			focus = Worker_Strikes
+		}
+		x = 1
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = Take_Controle 
+		icon = GFX_goal_support_fourth_int
+		cost = 10
+		prerequisite = {
+			focus = Rally_The_People
+		}
+		x = 1
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+				}
+
+	}
+	focus = {
+		id = Union_Of_North_America
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = Take_Controle 
+		}
+		x = 1
+		y = 4
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = UNION_OF_NORTH_AMERICA
+				}
+
+	}
+	focus = {
+		id = infultrate_Ontario
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = Union_Of_North_America
+		}
+		mutually_exclusive = {
+			focus = The_Canadian_Menace
+		}
+		x = 1
+		y = 5
+			completion_reward = {
+			ONT = {
+				add_ideas = quebecois_influence
+
+				}
+			}
+
+	}
+	focus = {
+		id = Formilize_The_Union
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = infultrate_Ontario
+		}
+		x = 1
+		y = 6
+		completion_reward = {
+			ONT = {
+				country_event = { id = ontario.0 }
+			}
+		}	
+	} 
+	focus = {
+		id = Strenthen_The_gouvernement
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = Discard_the_Treaty_Of_1934
+		}
+		mutually_exclusive = {
+			focus = Worker_Strikes
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+				GQU = {
+				 add_ideas = fascist_propaganda
+				 }
+		}
+
+	}
+	focus = {
+		id = Purge_The_communists
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = Strenthen_The_gouvernement
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+				add_ideas = purge_com
+				 }
+		}
+
+	focus = {
+		id = Military_Youth
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = Purge_The_communists
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			add_ideas = milyouth
+		}
+
+	}
+	focus = {
+		id = Prepare_For_War
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = Discard_the_Treaty_Of_1934
+		}
+		x = 6
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = the_Border_with_Ontario
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = Prepare_For_War
+		}
+		x = 5
+		y = 2
+			completion_reward = {
+					GQU = {
+				country_event = { id = quebec.3 }
+			}
+		}
+	}
+	#LATER
+	focus = {
+		id = Form_The_Elite_Guard
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = the_Border_with_Ontario
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = Modernize_the_Army
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = Form_The_Elite_Guard
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+}
+	focus = {
+		id = The_Canadian_Menace
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = Modernize_the_Army
+		}
+		mutually_exclusive = {
+			focus = infultrate_Ontario
+		}
+		x = 5
+		y = 5
+		completion_reward {
+			add_ideas = {id = canada_men}
+	}
+}
+	focus = {
+		id = 2nd_Canadian_War
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = The_Canadian_Menace
+		}
+		x = 5
+		y = 6
+		completion_reward {
+		 declare_war_on = {
+    target = ONT
+    type = annex_everything
+		}
+	}
+}
+	focus = {
+		id = United_Once_Again
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = 2nd_Canadian_War
+		}
+		availabe = {
+		owns_state = 276
+		 }
+		mutually_exclusive = {
+			focus = Like_1812
+		}
+		x = 9
+		y = 7
+		completion_reward {
+			add_ideas = {id = united}
+			remove_ideas = {id = canada_men}
+			GQU = {
+			country_event = {id = quebec.4}
+			}
+		}
+	}
+	focus = {
+		id = Colonial_Overlords
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = United_Once_Again
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = the_Border_With_Boston
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = Prepare_For_War
+		}
+		mutually_exclusive = {
+			focus = Trade_With_Boston
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+		GQU = {
+			country_event = {id = quebec.5}
+			}
+		}
+	}
+	focus = {
+		id = Anti_American_Propiganda
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = the_Border_With_Boston
+		}
+		x = 7
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = anti_america
+				}
+
+	}
+	focus = {
+		id = 1st_Tank_division
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = Anti_American_Propiganda
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = The_American_Menace
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = 1st_Tank_division
+		}
+		x = 7
+		y = 5
+		completion_reward = {
+			add_ideas = {id = american_men}
+		}
+	}
+	focus = {
+		id = Trade_With_Boston
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = Respect_The_Treaty_Of_1934
+			focus = Prepare_For_War
+		}
+		mutually_exclusive = {
+			focus = the_Border_With_Boston
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			add_ideas = {id = trade_b }
+	}
+}
+	focus = {
+		id = Pro_American_Sentiment
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = Trade_With_Boston
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = joint_research_teams
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = Pro_American_Sentiment
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = Backstab_Them
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = joint_research_teams
+		}
+		mutually_exclusive = {
+			focus = Aid_for_Canadian_land
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+		declare_war_on = {
+		target = BOS
+		type = annex_everything
+		}
+	}
+}
+	focus = {
+		id = Great_American_war
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = The_American_Menace
+			focus = Backstab_Them
+		}
+		x = 7
+		y = 6
+		completion_reward = {
+		declare_war_on = {
+		target = BOS
+		type = annex_everything
+		}
+	}
+}
+
+	focus = {
+		id = A_New_Destiny
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = Respect_The_Treaty_Of_1934
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+		add_ideas = {id = a_new_destiny}
+		}
+
+	}
+	focus = {
+		id = Convince_the_High_class
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = A_New_Destiny
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			add_ideas = {id = high_class}
+		}
+
+	}
+	focus = {
+		id = Back_to_the_Old
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = Convince_the_High_class
+		}
+		x = 13
+		y = 4
+			completion_reward = {
+					set_politics = {
+							ruling_party = democratic
+							elections_allowed = yes
+						}
+				}
+	}
+	focus = {
+		id = Aid_for_Canadian_Land
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = Back_to_the_Old
+			focus = joint_research_teams
+		}
+		mutually_exclusive = {
+			focus = Backstab_Them
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+		BOS = {
+		country_event = {id = boston.0}
+		}
+	}
+}
+	focus = {
+		id = Focus_On_science
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = Back_to_the_Old
+		}
+		x = 13
+		y = 5
+			completion_reward = {
+			add_research_slot = 1
+			}
+
+	}
+	focus = {
+		id = Deal_with_Canadians
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = Focus_On_science
+		}
+		x = 13
+		y = 6
+		completion_reward = {
+			ONT = {
+				country_event = { id = ontario.0 }
+			}
+		}	
+	}
+	focus = {
+		id = Oh_canada
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = Deal_with_Canadians
+		}
+		x = 13
+		y = 7
+			completion_reward = {
+				add_ideas = {id = oh_canada}
+		}
+	}
+	focus = {
+		id = World_Police
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = Oh_canada
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = Purge_the_protesters
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = Deal_With_the_Rebles
+		}
+		mutually_exclusive = {
+			focus = Deal_With_the_Protesters
+		}
+		x = 15
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = -50
+				}
+
+	}
+	focus = {
+		id = Deal_With_the_Protesters
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = Deal_With_the_Rebles
+		}
+		mutually_exclusive = {
+			focus = Purge_the_protesters
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = Kill_Political_Enemies
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = Purge_the_protesters
+			focus = Deal_With_the_Protesters
+		}
+		mutually_exclusive = {
+			focus = Talk_With_Political_Enemies
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = Talk_With_Political_Enemies
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = Deal_With_the_Protesters
+			focus = Purge_the_protesters
+		}
+		mutually_exclusive = {
+			focus = Kill Political Enemies
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = jail_reble_leaders
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = Kill_Political_Enemies
+			focus = Talk_With_Political_Enemies
+		}
+		mutually_exclusive = {
+			focus = Deal_With_the_Rebles
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = Deal_With_the_Rebles
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = Kill_Political_Enemies
+			focus = Talk_With_Political_Enemies
+		}
+		mutually_exclusive = {
+			focus = jail_reble_leaders
+		}
+		x = 17
+		y = 3
+
+	}
+	focus = {
+		id = Clense_The_west
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10
+		prerequisite = {
+			focus = jail_reble_leaders
+			focus = Deal_With_the_Rebles
+		}
+		mutually_exclusive = {
+			focus = Deal_With_The_West
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = Deal_With_The_West
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = Deal_With_the_Rebles
+			focus = jail_reble_leaders
+		}
+		mutually_exclusive = {
+			focus = Clense The west
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = Military_Industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = Industry_Focus
+		}
+		mutually_exclusive = {
+			focus = Civilian_Industry
+		}
+		x = 19
+		y = 1
+
+	}
+	focus = {
+		id = Civilian_Industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = Industry_Focus
+		}
+		mutually_exclusive = {
+			focus = Military_Industry
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = Military_Industry2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = Civilian_Industry
+			focus = Military_Industry
+		}
+		mutually_exclusive = {
+			focus = Civilian_Industry2
+		}
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = Civilian_Industry2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = Civilian_Industry
+			focus = Military_Industry
+		}
+		mutually_exclusive = {
+			focus = Military_Industry2
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = Military_Industry3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = Civilian_Industry2
+			focus = Military_Industry2
+		}
+		mutually_exclusive = {
+			focus = Civilian_Industry3
+		}
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = Look_to_The_West
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = Aid_for_Canadian_Land
+		}
+		mutually_exclusive = {
+			focus = Like_1812
+		}
+		x = 11
+		y = 7
+		completion_reward = {
+		create_wargoal = {
+		type = puppet_wargoal_focus
+		target = WSA
+		}
+	}
+}
+	focus = {
+		id = 2nd_1812
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = Great_American_war
+		}
+		mutually_exclusive = {
+			focus = United_Once_Again
+			focus = Look_to_The_West
+		}
+		x = 7
+		y = 7
+		completion_reward = {
+		declare_war_on = {
+		target = NYT
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = SLS
+		type = annex_everything
+		}
+		declare_war_on = {
+		target = PHD
+		type = annex_everything
+		}
+	}
+}
+	focus = {
+		id = Civilian_Industry3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = Military_Industry2
+			focus = Civilian_Industry2
+		}
+		mutually_exclusive = {
+			focus = Military_Industry3
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = coup_The_Fascists
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = World_Police
+		}
+		x = 11
+		y = 9
+
+	}
+	focus = {
+		id = Coup_The_Communists
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = World_Police
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = coup_The_Monarchists
+		icon = GFX_goal_anschluss
+		cost = 10
+		prerequisite = {
+			focus = World_Police
+		}
+		x = 15
+		y = 9
+
+	}
+}
